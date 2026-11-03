@@ -1,0 +1,305 @@
+/* ===== Сброс ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ===== Камуфляжный фон ===== */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #e8e4d8;
+  min-height: 100vh;
+  background-color: #3b4a2e;
+  background-image:
+    radial-gradient(circle at 20% 30%, #4d5c36 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, #2f3d22 0%, transparent 45%),
+    radial-gradient(circle at 60% 70%, #556b3a 0%, transparent 40%),
+    radial-gradient(circle at 15% 80%, #2a3320 0%, transparent 45%),
+    radial-gradient(circle at 90% 90%, #3f4d2c 0%, transparent 40%),
+    linear-gradient(135deg, #39482a, #2c3820);
+  background-attachment: fixed;
+  background-size: cover;
+  line-height: 1.6;
+}
+
+/* ===== Кнопка-меню ===== */
+.menu-btn {
+  position: fixed;
+  top: 18px; left: 18px;
+  z-index: 1001;
+  width: 52px; height: 52px;
+  border: 2px solid #9ea87a;
+  border-radius: 10px;
+  background: rgba(30, 38, 20, 0.85);
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center; gap: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.menu-btn:hover { background: rgba(60, 75, 40, 0.95); transform: scale(1.05); }
+.menu-btn span {
+  display: block; width: 26px; height: 3px;
+  background: #cfd6a8; border-radius: 2px; transition: 0.3s;
+}
+.menu-btn.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.menu-btn.open span:nth-child(2) { opacity: 0; }
+.menu-btn.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ===== Боковое меню ===== */
+.sidebar {
+  position: fixed; top: 0; left: 0;
+  width: 300px; max-width: 85vw; height: 100vh;
+  background: linear-gradient(180deg, #2a3320, #1c2416);
+  border-right: 3px solid #6b7a4a;
+  padding: 90px 20px 20px;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex; flex-direction: column;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.6);
+}
+.sidebar.open { transform: translateX(0); }
+.sidebar-title {
+  font-size: 1.4rem; color: #cfd6a8;
+  margin-bottom: 25px; letter-spacing: 1px;
+  border-bottom: 1px solid #4a5a30; padding-bottom: 12px;
+}
+.sidebar-nav { display: flex; flex-direction: column; gap: 12px; }
+.nav-btn {
+  text-align: left; padding: 14px 16px;
+  font-size: 1rem; font-family: inherit;
+  color: #d8dcb8;
+  background: rgba(70, 85, 45, 0.35);
+  border: 1px solid #4e5c32;
+  border-radius: 8px;
+  cursor: pointer; transition: all 0.25s;
+}
+.nav-btn:hover { background: rgba(110, 130, 70, 0.5); transform: translateX(5px); }
+.nav-btn.active {
+  background: linear-gradient(90deg, #6b7a4a, #556b3a);
+  color: #fff; border-color: #9ea87a;
+  box-shadow: 0 0 12px rgba(150, 170, 100, 0.4);
+}
+.sidebar-footer {
+  margin-top: auto; font-size: 0.85rem; color: #8a9468;
+  text-align: center; font-style: italic;
+}
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 999; opacity: 0; pointer-events: none;
+  transition: opacity 0.4s;
+}
+.overlay.show { opacity: 1; pointer-events: auto; }
+
+/* ===== Контент ===== */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 20px 60px;
+}
+.page { display: none; animation: fadeIn 0.5s ease; }
+.page.active { display: block; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-title {
+  font-size: 2.2rem; color: #e4e8c4;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  border-left: 6px solid #7d8f52;
+  padding-left: 16px; margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.page-subtitle {
+  font-size: 1.15rem; color: #b8c190;
+  font-style: italic; margin-bottom: 30px;
+  padding-left: 22px;
+}
+
+/* ===== Галерея ===== */
+.gallery {
+  display: flex; flex-wrap: wrap;
+  gap: 22px; margin: 30px 0;
+  align-items: flex-start;
+}
+.photo-card {
+  display: flex; flex-direction: column;
+  align-items: center;
+  background: rgba(28, 36, 22, 0.7);
+  border: 2px solid #4e5c32;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.photo-card:hover {
+  border-color: #7d8f52;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+}
+
+/* ===== Обёртка фото — здесь живёт ручка ===== */
+.photo-wrap {
+  position: relative;
+  display: block;
+  line-height: 0;
+  /* Задаём минимальные размеры, чтобы блок не схлопывался, если фото не загрузилось */
+  min-width: 240px;
+  min-height: 180px;
+  background: #2a3320; /* Тёмный фон под фото */
+  border-radius: 8px;
+}
+
+.photo {
+  display: block;
+  width: 100%;    /* Растягиваем на всю ширину обёртки */
+  max-width: 240px; /* Стартовый размер */
+  height: auto;
+  min-height: 180px; /* Чтобы было видно пустую рамку */
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid #5a6b3c;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  cursor: zoom-in;
+  background: #2a3320;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.photo:hover {
+  border-color: #9ea87a;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.8), 0 0 18px rgba(150, 170, 100, 0.35);
+}
+
+/* ===== Кружок-ручка ресайза ===== */
+.resize-handle {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9ea87a, #6b7a4a);
+  color: #1c2416;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
+  cursor: nwse-resize;
+  border: 2px solid #1c2416;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  z-index: 5;
+  user-select: none;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+}
+.resize-handle:hover {
+  transform: scale(1.15);
+  background: linear-gradient(135deg, #c2cc9a, #8a9a62);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.9), 0 0 12px rgba(200, 210, 150, 0.6);
+}
+
+/* Во время перетаскивания — убираем выделение */
+body.resizing { cursor: nwse-resize !important; user-select: none !important; }
+body.resizing .photo { pointer-events: none; }
+
+/* ===== Подпись ===== */
+.photo-caption {
+  margin-top: 12px;
+  max-width: 260px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #dde2c4;
+  padding: 8px 10px;
+  background: rgba(60, 75, 40, 0.35);
+  border-radius: 8px;
+  border: 1px dashed #5a6b3c;
+  transition: background 0.25s, border-color 0.25s;
+}
+.photo-caption:focus {
+  outline: none;
+  background: rgba(70, 90, 45, 0.6);
+  border-color: #9ea87a;
+}
+.photo-caption::before { content: "❝ "; color: #8a9468; }
+.photo-caption::after  { content: " ❞"; color: #8a9468; }
+
+/* ===== Текстовые блоки ===== */
+.text-block {
+  background: rgba(28, 36, 22, 0.82);
+  border: 2px solid #4e5c32;
+  border-radius: 10px;
+  padding: 22px 26px;
+  margin: 25px 0;
+  font-size: 1.08rem;
+  color: #dde2c4;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.4);
+  position: relative;
+}
+.text-block.editable:focus {
+  outline: 2px dashed #9ea87a;
+  background: rgba(35, 45, 25, 0.95);
+}
+.text-block::before {
+  content: "✎ (текст можно редактировать)";
+  position: absolute; top: -11px; left: 16px;
+  font-size: 0.7rem; background: #3b4a2e; color: #9ea87a;
+  padding: 2px 10px; border-radius: 6px;
+  border: 1px solid #4e5c32;
+}
+
+.final-block {
+  margin-top: 40px; padding: 30px;
+  background: rgba(28, 36, 22, 0.9);
+  border: 3px double #7d8f52;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+.final-block h2 {
+  color: #e4e8c4; font-size: 1.8rem;
+  margin-bottom: 16px; text-shadow: 2px 2px 5px #000;
+}
+.final-block p { font-size: 1.1rem; color: #dde2c4; }
+.final-block .editable:focus { outline: 2px dashed #9ea87a; }
+
+/* ===== Мобильная адаптация ===== */
+@media (max-width: 600px) {
+  .content { padding-top: 85px; }
+  .page-title { font-size: 1.6rem; }
+  .gallery { justify-content: center; }
+  .photo { width: 200px; }
+  .photo-caption { max-width: 220px; }
+}
+/* ===== Большой заголовок на главной ===== */
+.main-greeting {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #e4e8c4;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-shadow: 
+    3px 3px 0px #2a3320,
+    6px 6px 15px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(150, 170, 100, 0.5);
+  line-height: 1.2;
+}
+
+/* Центрируем подзаголовок под ним */
+#page-home .page-subtitle {
+  text-align: center;
+  padding-left: 0;
+  margin-bottom: 40px;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Чтобы на телефонах текст не вылезал за края */
+@media (max-width: 600px) {
+  .main-greeting {
+    font-size: 2.2rem;
+  }
+  #page-home .page-subtitle {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дембельский альбом — Паша</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+
+  <aside class="sidebar" id="sidebar">
+    <h2 class="sidebar-title">📖 Альбом</h2>
+    <nav class="sidebar-nav">
+      <button class="nav-btn active" data-page="home">🏠 Всё это — главная</button>
+      <button class="nav-btn" data-page="army">🪖 Паша в армии</button>
+      <button class="nav-btn" data-page="vika">💑 Паша с Викой</button>
+      <button class="nav-btn" data-page="all">📸 Все фотки</button>
+    </nav>
+    <p class="sidebar-footer">С любовью, для Паши ❤️</p>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main class="content">
+
+    <!-- ================= ГЛАВНАЯ ================= -->
+    <section class="page active" id="page-home">
+      
+      <h1 class="main-greeting">ПАША С ВОЗВРАЩЕНИЕМ!</h1>
+      <p class="page-subtitle">Дембельский альбом</p>
+
+      <div class="gallery">
+        <figure class="photo-card" data-photo="home1">
+          <div class="photo-wrap">
+            <img src="фотки/foto2.jpg" alt="Фото 1" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Ты — настоящий друг. Пусть каждый день приносит радость!</figcaption>
+        </figure>
+
+        <figure class="photo-card" data-photo="home2">
+          <div class="photo-wrap">
+            <img src="фотки/armia3.jpg" alt="Фото 2" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Пусть дома будет тепло, а на душе — спокойно.</figcaption>
+        </figure>
+
+        <figure class="photo-card" data-photo="home3">
+          <div class="photo-wrap">
+            <img src="фотки/armia10.jpg" alt="Фото 3" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Спасибо за твою дружбу — она дорогого стоит.</figcaption>
+        </figure>
+      </div>
+
+      <div class="text-block editable">
+        <p>Этот сайт — маленький подарок для настоящего друга. Здесь собраны самые тёплые моменты: служба, встречи, дорогие люди. Каждая фотография — это история, а каждая история — это часть большого пути. Листай, вспоминай, улыбайся. И знай: тебя ждали и очень тобой гордятся!</p>
+      </div>
+    </section>
+
+    <!-- ================= АРМИЯ ================= -->
+    <section class="page" id="page-army">
+      <h1 class="page-title">Паша в армии</h1>
+      <div class="gallery">
+        <figure class="photo-card" data-photo="army1">
+          <div class="photo-wrap">
+            <img src="фотки/armia1.jpg" alt="Армия 1" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Служба закаляет — и ты прошёл её достойно!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army2">
+          <div class="photo-wrap">
+            <img src="фотки/armia2.jpg" alt="Армия 2" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Настоящий солдат — это про тебя. Гордимся!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army3">
+          <div class="photo-wrap">
+            <img src="фотки/armia3.jpg" alt="Армия 3" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Позади тревоги и наряды — впереди спокойные дни дома.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army4">
+          <div class="photo-wrap">
+            <img src="фотки/armia4.jpg" alt="Армия 4" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Каждый день службы — шаг к дому.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army5">
+          <div class="photo-wrap">
+            <img src="фотки/armia5.jpg" alt="Армия 5" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Дружба, закалённая службой, — на всю жизнь.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army6">
+          <div class="photo-wrap">
+            <img src="фотки/armia6.jpg" alt="Армия 6" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Ты справился — и это главное.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army7">
+          <div class="photo-wrap">
+            <img src="фотки/armia7.jpg" alt="Армия 7" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Пусть дома ждут только хорошие новости.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army8">
+          <div class="photo-wrap">
+            <img src="фотки/armia8.jpg" alt="Армия 8" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Солдатская выдержка — теперь с тобой навсегда.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army9">
+          <div class="photo-wrap">
+            <img src="фотки/armia9.jpg" alt="Армия 9" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Ты выдержал всё это с гордо поднятой головой.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army10">
+          <div class="photo-wrap">
+            <img src="фотки/armia10.jpg" alt="Армия 10" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Впереди — мирная жизнь и большие планы.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="army11">
+          <div class="photo-wrap">
+            <img src="фотки/armia11.jpg" alt="Армия 11" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Дембель — это праздник души!</figcaption>
+        </figure>
+      </div>
+      <div class="text-block editable">
+        <p>Год службы — это не просто год. Это подъёмы до рассвета, тревоги, наряды, письма домой и настоящая мужская дружба. Здесь Паша учился быть стойким, отвечать за других и ценить простые вещи. Армия закаляет характер — и это видно на каждом кадре.</p>
+      </div>
+    </section>
+
+    <!-- ================= ПАША С ВИКОЙ ================= -->
+    <section class="page" id="page-vika">
+      <h1 class="page-title">Паша и Вика</h1>
+      <div class="gallery">
+        <figure class="photo-card" data-photo="vika1">
+          <div class="photo-wrap">
+            <img src="фотки/vika1.jpg" alt="Вика 1" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Даже весь город у твоих ног — когда рядом любимая.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="vika2">
+          <div class="photo-wrap">
+            <img src="фотки/vika2.jpg" alt="Вика 2" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Даже в самый пасмурный день вместе становится теплее.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="vika3">
+          <div class="photo-wrap">
+            <img src="фотки/vika3.jpg" alt="Вика 3" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Самые искренние улыбки — когда вы рядом.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="vika4">
+          <div class="photo-wrap">
+            <img src="фотки/vika4.jpg" alt="Вика 4" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Дым рассеется, а чувства останутся. И дембель не за горами!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="vika5">
+          <div class="photo-wrap">
+            <img src="фотки/vika5.jpg" alt="Вика 5" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Вместе вы — настоящая команда.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="vika6">
+          <div class="photo-wrap">
+            <img src="фотки/vika6.jpg" alt="Вика 6" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Тёплые куртки, осенняя беседка и взгляды, полные нежности.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="vika7">
+          <div class="photo-wrap">
+            <img src="фотки/vika7.jpg" alt="Вика 7" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">С тобой даже обычные моменты переворачиваются с ног на голову!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="vika8">
+          <div class="photo-wrap">
+            <img src="фотки/vika8.jpg" alt="Вика 8" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Пусть таких счастливых моментов в вашей жизни будет бесконечно много.</figcaption>
+        </figure>
+      </div>
+      <div class="text-block editable">
+        <p>✏️ Здесь напиши свой текст про Пашу и Вику — историю их встречи, тёплые слова, пожелания. Этот блок редактируется прямо на сайте или в блокноте.</p>
+      </div>
+    </section>
+
+    <!-- ================= ВСЕ ФОТКИ ================= -->
+    <section class="page" id="page-all">
+      <h1 class="page-title">Все фотографии</h1>
+
+      <div class="gallery gallery-all">
+        <figure class="photo-card" data-photo="all1">
+          <div class="photo-wrap">
+            <img src="фотки/Pasha.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Тёплые моменты вдвоём.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all2">
+          <div class="photo-wrap">
+            <img src="фотки/armia5.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Ночные будни солдата.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all3">
+          <div class="photo-wrap">
+            <img src="фотки/foto3.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Смотрим на мир с другой стороны.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all4">
+          <div class="photo-wrap">
+            <img src="фотки/vika4.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Улыбки, которые согревают.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all5">
+          <div class="photo-wrap">
+            <img src="фотки/Pasha4.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Боевая готовность!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all6">
+          <div class="photo-wrap">
+            <img src="фотки/armia9.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">С автоматом накоротке.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all7">
+          <div class="photo-wrap">
+            <img src="фотки/foto1.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Друзья — это навсегда.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all8">
+          <div class="photo-wrap">
+            <img src="фотки/vika1.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Красота!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all9">
+          <div class="photo-wrap">
+            <img src="фотки/Pasha8.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">И строить, и чинить — всё умеет!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all10">
+          <div class="photo-wrap">
+            <img src="фотки/armia2.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Бескрайние просторы и синее небо.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all11">
+          <div class="photo-wrap">
+            <img src="фотки/foto4.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Самые лучшие моменты — с близкими.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all12">
+          <div class="photo-wrap">
+            <img src="фотки/vika6.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Закат в родных краях.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all13">
+          <div class="photo-wrap">
+            <img src="фотки/Pasha2.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Смотрим на мир с другой стороны.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all14">
+          <div class="photo-wrap">
+            <img src="фотки/armia8.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">На страже Родины.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all16">
+          <div class="photo-wrap">
+            <img src="фотки/vika8.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Красные розы и романтика.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all17">
+          <div class="photo-wrap">
+            <img src="фотки/Pasha6.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Вместе веселее!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all18">
+          <div class="photo-wrap">
+            <img src="фотки/armia11.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">С ветерком по ночному лесу.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all19">
+          <div class="photo-wrap">
+            <img src="фотки/foto2.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Музыкальные вечера.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all20">
+          <div class="photo-wrap">
+            <img src="фотки/vika2.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Тёплые куртки и нежные взгляды.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all22">
+          <div class="photo-wrap">
+            <img src="фотки/armia1.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Время, которое закалило характер.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all23">
+          <div class="photo-wrap">
+            <img src="фотки/vika3.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Самые искренние эмоции.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all24">
+          <div class="photo-wrap">
+            <img src="фотки/Pasha3.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Забавный кадр!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all25">
+          <div class="photo-wrap">
+            <img src="фотки/armia7.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Полная экипировка.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all26">
+          <div class="photo-wrap">
+            <img src="фотки/vika7.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Взгляд с другой стороны.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all27">
+          <div class="photo-wrap">
+            <img src="фотки/Pasha5.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">И собаки довольны!</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all28">
+          <div class="photo-wrap">
+            <img src="фотки/armia4.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">С книгой и шахматами.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all29">
+          <div class="photo-wrap">
+            <img src="фотки/vika5.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Самые лучшие моменты.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all30">
+          <div class="photo-wrap">
+            <img src="фотки/armia6.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">С гитарой в руках.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all31">
+          <div class="photo-wrap">
+            <img src="фотки/vika4.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">В дыму, но вместе.</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all32">
+          <div class="photo-wrap">
+            <img src="фотки/armia10.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Дембель не за горами!</figcaption>
+        </figure>
+      </div>
+
+      <div class="final-block">
+        <h2>🎖️ Паша, с возвращением!</h2>
+        <p class="editable">Дембель — это не конец, это начало новой жизни. Позади тревоги и наряды, впереди — дом, друзья, любимые люди и большие планы. Пусть всё, что ты пережил, сделает тебя только сильнее, а всё хорошее — поскорее случится. Добро пожаловать домой, Паша! 🇷🇺</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
