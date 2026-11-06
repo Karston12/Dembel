@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Дембельский альбом — Паша</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,13 +14,16 @@
   </button>
 
   <aside class="sidebar" id="sidebar">
-    <h2 class="sidebar-title">📖 Альбом</h2>
+    <h2 class="sidebar-title">🎖️ Дембельский Альбом</h2>
     <nav class="sidebar-nav">
-      <button class="nav-btn active" data-page="home">🏠 Всё это — главная</button>
-      <button class="nav-btn" data-page="army">🪖 Паша в армии</button>
-      <button class="nav-btn" data-page="all">📸 Все фотки</button>
+      <button class="nav-btn active" data-page="home">🏠 Главная страница</button>
+      <button class="nav-btn" data-page="army">🪖 Армейские будни</button>
+      <button class="nav-btn" data-page="all">📸 Фотогалерея</button>
     </nav>
-    <p class="sidebar-footer">С любовью, для Паши ❤️</p>
+    <div class="sidebar-footer">
+      <p>Служба пройдена.<br>Дом ждёт!</p>
+      <p style="font-size: 0.7rem; margin-top: 10px;">Сделано с душой ❤️</p>
+    </div>
   </aside>
   <div class="overlay" id="overlay"></div>
 
@@ -28,8 +32,16 @@
     <!-- ================= ГЛАВНАЯ ================= -->
     <section class="page active" id="page-home">
       
-      <h1 class="main-greeting">ПАША С ВОЗВРАЩЕНИЕМ!</h1>
-      <p class="page-subtitle">Дембельский альбом</p>
+      <div class="hero-section">
+        <h1 class="main-greeting">ПАША С ВОЗВРАЩЕНИЕМ!</h1>
+        <p class="page-subtitle">История одного года, которую хочется помнить</p>
+      </div>
+
+      <div class="quote-block">
+        <div class="quote-icon">❝</div>
+        <p class="quote-text">Служба — это не просто время, это школа жизни. Ты прошёл её с честью, и теперь впереди — только мирные дни.</p>
+        <p class="quote-author">— Твой друг</p>
+      </div>
 
       <div class="gallery">
         <figure class="photo-card" data-photo="home1">
@@ -64,7 +76,9 @@
 
     <!-- ================= АРМИЯ ================= -->
     <section class="page" id="page-army">
-      <h1 class="page-title">Паша в армии</h1>
+      <h1 class="page-title">Армейские будни</h1>
+      <p class="page-subtitle" style="text-align:left; margin-bottom: 20px;">Год, который закалил характер</p>
+
       <div class="gallery">
         <figure class="photo-card" data-photo="army1">
           <div class="photo-wrap">
@@ -144,19 +158,22 @@
           <figcaption class="photo-caption editable">Дембель — это праздник души!</figcaption>
         </figure>
       </div>
-      <div class="text-block editable">
-        <p>Год службы — это не просто год. Это подъёмы до рассвета, тревоги, наряды, письма домой и настоящая мужская дружба. Здесь Паша учился быть стойким, отвечать за других и ценить простые вещи. Армия закаляет характер — и это видно на каждом кадре.</p>
+
+      <div class="highlight-block">
+        <h3>Год, который изменил всё</h3>
+        <p>Подъёмы до рассвета, тревоги, наряды, письма домой и настоящая мужская дружба. Армия — это не просто служба, это школа жизни. Ты прошёл её с честью, и это видно на каждом кадре. Спасибо за стойкость и характер!</p>
       </div>
     </section>
 
     <!-- ================= ВСЕ ФОТКИ ================= -->
     <section class="page" id="page-all">
-      <h1 class="page-title">Все фотографии</h1>
+      <h1 class="page-title">Фотогалерея</h1>
+      <p class="page-subtitle" style="text-align:left; margin-bottom: 20px;">Моменты, которые остаются в памяти</p>
 
       <div class="gallery gallery-all">
         <figure class="photo-card" data-photo="all1">
           <div class="photo-wrap">
-            <img src="Pasha.jpg" alt="Фото" class="photo">
+            <img src="Pasha1.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
           </div>
           <figcaption class="photo-caption editable">Тёплые моменты.</figcaption>
@@ -198,7 +215,7 @@
         </figure>
         <figure class="photo-card" data-photo="all7">
           <div class="photo-wrap">
-            <img src="Pasha8.jpg" alt="Фото" class="photo">
+            <img src="Pasha7.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
           </div>
           <figcaption class="photo-caption editable">И строить, и чинить — всё умеет!</figcaption>
@@ -212,7 +229,7 @@
         </figure>
         <figure class="photo-card" data-photo="all9">
           <div class="photo-wrap">
-            <img src="foto4.jpg" alt="Фото" class="photo">
+            <img src="foto5.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
           </div>
           <figcaption class="photo-caption editable">Самые лучшие моменты — с близкими.</figcaption>
@@ -261,47 +278,54 @@
         </figure>
         <figure class="photo-card" data-photo="all16">
           <div class="photo-wrap">
+            <img src="Pasha8.jpg" alt="Фото" class="photo">
+            <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
+          </div>
+          <figcaption class="photo-caption editable">Немного юмора для настроения 😄</figcaption>
+        </figure>
+        <figure class="photo-card" data-photo="all17">
+          <div class="photo-wrap">
             <img src="armia1.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
           </div>
           <figcaption class="photo-caption editable">Время, которое закалило характер.</figcaption>
         </figure>
-        <figure class="photo-card" data-photo="all17">
+        <figure class="photo-card" data-photo="all18">
           <div class="photo-wrap">
             <img src="Pasha3.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
           </div>
           <figcaption class="photo-caption editable">Забавный кадр!</figcaption>
         </figure>
-        <figure class="photo-card" data-photo="all18">
+        <figure class="photo-card" data-photo="all19">
           <div class="photo-wrap">
             <img src="armia7.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
           </div>
           <figcaption class="photo-caption editable">Полная экипировка.</figcaption>
         </figure>
-        <figure class="photo-card" data-photo="all19">
+        <figure class="photo-card" data-photo="all20">
           <div class="photo-wrap">
             <img src="Pasha5.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
           </div>
           <figcaption class="photo-caption editable">И собаки довольны!</figcaption>
         </figure>
-        <figure class="photo-card" data-photo="all20">
+        <figure class="photo-card" data-photo="all21">
           <div class="photo-wrap">
             <img src="armia4.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
           </div>
           <figcaption class="photo-caption editable">С книгой и шахматами.</figcaption>
         </figure>
-        <figure class="photo-card" data-photo="all21">
+        <figure class="photo-card" data-photo="all22">
           <div class="photo-wrap">
             <img src="armia6.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
           </div>
           <figcaption class="photo-caption editable">С гитарой в руках.</figcaption>
         </figure>
-        <figure class="photo-card" data-photo="all22">
+        <figure class="photo-card" data-photo="all23">
           <div class="photo-wrap">
             <img src="armia10.jpg" alt="Фото" class="photo">
             <div class="resize-handle" title="Потяни, чтобы изменить размер">&lt;&gt;</div>
@@ -313,10 +337,13 @@
       <div class="final-block">
         <h2>🎖️ Паша, с возвращением!</h2>
         <p class="editable">Дембель — это не конец, это начало новой жизни. Позади тревоги и наряды, впереди — дом, друзья, любимые люди и большие планы. Пусть всё, что ты пережил, сделает тебя только сильнее, а всё хорошее — поскорее случится. Добро пожаловать домой, Паша! 🇷🇺</p>
+        <button class="cta-button" onclick="alert('Поздравляем с дембелем, Паша! 🎉')">Забрать награду 🏆</button>
       </div>
     </section>
 
   </main>
+
+  <button class="scroll-top" id="scrollTop" title="Наверх">↑</button>
 
   <script src="script.js"></script>
 </body>
